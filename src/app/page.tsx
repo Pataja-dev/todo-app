@@ -47,7 +47,7 @@ const Home = () => {
       </div >
       <TaskList //- Pass the list of tasks as a prop from the parent component to the child component.
       tasks={tasks} 
-      removeTask={removeTask} /> 
+      removeTask={removeTask} />  
     </div>
   );
 };
