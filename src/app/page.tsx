@@ -37,7 +37,7 @@ const Home = () => {
           placeholder="Enter a Task..."
         />
         
-      <button //     - Add a button labeled "Add Task" to add the task to a list.
+      <button // - Add a button labeled "Add Task" to add the task to a list.
         onClick={addTask} 
         type="button" 
         className="sm:h-[60px] h-60 mt-10  sm:mt-10 ml-4 sm:ml-4 w-[100px] text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center">
@@ -45,9 +45,10 @@ const Home = () => {
       </button>
     </form>
       </div >
-      <TaskList //- Pass the list of tasks as a prop from the parent component to the child component.
-      tasks={tasks} 
-      removeTask={removeTask} />  
+      <TaskList 
+      tasks={tasks} //- Pass the list of tasks as a prop from the parent component to the child component.
+      removeTask={removeTask} //- Pass the state and any necessary functions (e.g., removeTask) from the parent component to the child component as props.
+      />  
     </div>
   );
 };
