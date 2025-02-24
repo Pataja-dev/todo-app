@@ -1,10 +1,11 @@
+//- Create a separate child component (e.g., TaskList) to display the list of tasks.
 import React from 'react';
 
 interface TaskListProps {
   tasks: string[];
   removeTask: (task: string) => void;
 }
-// - Create a separate child component (e.g., TaskList) to display the list of tasks.
+
 const TaskList: React.FC<TaskListProps> = ({ tasks = [], removeTask }) => {
   return (
     <>
@@ -20,7 +21,7 @@ const TaskList: React.FC<TaskListProps> = ({ tasks = [], removeTask }) => {
                 </span>
                 <button  //- Add a "Remove" button next to each task to delete it from the list.
                 className="self-align-right font-medium text-red-600 dark:text-red-500 hover:underline"
-                onClick={() => removeTask(task)} //Pass the list of tasks as a prop from the parent component to the child component.
+                onClick={() => removeTask(task)} //- Implement functionality to allow the child component to call a parent function (passed via props) to update the parent state (e.g., removing a task).
                 >
                 Remove
                 </button>

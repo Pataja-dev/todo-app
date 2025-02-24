@@ -45,7 +45,9 @@ const Home = () => {
       </button>
     </form>
       </div >
-      <TaskList tasks={tasks} removeTask={removeTask} />
+      <TaskList //- Pass the list of tasks as a prop from the parent component to the child component.
+      tasks={tasks} 
+      removeTask={removeTask} /> 
     </div>
   );
 };
